@@ -4,7 +4,7 @@ import {
   Route,
   NavLink
  } from 'react-router-dom';
-import logo from '../images/unscrewed_logo.svg';
+import image_logo from '../images/unscrewed_logo.svg';
 
 export const TopNav = () => {
 	return (
@@ -15,7 +15,7 @@ export const TopNav = () => {
 		              <div class="row">
 		                  <div class="col-12 d-flex flex-row align-items-center justify-content-between pt-15 pb-15">
 		                      <a href="../index.html" class="logo">
-		                          <img src={logo} class="img-fluid" alt="Unscrewed Logo" />
+		                          <img src={image_logo} class="img-fluid" alt="Unscrewed Logo" />
 		                      </a>
 		                      <div class="d-flex justify-content-center">
 		                          <a href="../index.html" class="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">App</a>
