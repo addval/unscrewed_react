@@ -1,5 +1,7 @@
 import React from 'react';
+import '../styles/logo-nav.css';
  
+
 export const LoginPage = () => {
 	return (
 		<div>
@@ -9,21 +11,29 @@ export const LoginPage = () => {
 			</span>
 			
 		
-				<div id="error_explanation" className="form-error">
+				<div id="error_explanation" className="form-error hide">
 					<p align='center'>Alert text</p>
 				</div>
 	
 			<div className="frm-login">
-					<input type="email" placeholder="Email Address..."/>
+					<div className="form-group">
+						<input type="email" placeholder="Email Address..."/>
+					</div>
+					
 					
 					<div id="forgot_email" className="error hide form-error"><p>Try entering emails and clicking "Forgot Password" to see if there's an associated account.</p></div>
 					<div id="forgot_password_error" className="error hide form-error"><p>Please enter email address and then click "Forgot Password".</p></div>
-					<a href="#" className="forgot-link" onclick="forgot_email();">Forgot email?</a>
-					<input type="password" placeholder="Password..."/>
-					<a href="#" className="forgot-link" onclick="forgot_password();">Forgot password?</a>
+					<a href="#" className="forgot-link"  >Forgot email?</a>
+					<div className="form-group">
+						<input type="password" placeholder="Password..."/>
+					</div>
+					
+					<a href="#" className="forgot-link"  >Forgot password?</a>
 					<div id="forgot_password_success" className="error hide form-success"><p>Password reset instructions have been emailed to you..</p></div>
 					<div id="email_error" className="error hide form-error"><p>Account do not exist with this email id.</p></div>
-				
+					<div className="form-group">
+						<input type="submit" name="commit" value="Login"/>
+					</div>
 			</div>
 			<div className="text-center fb-login-wraap">
 					<div id="signin_error" className="error hide form-error"><p></p></div>
