@@ -4,7 +4,8 @@ import {
   Route,
   NavLink
  } from 'react-router-dom';
- 
+import logo from '../images/unscrewed_logo.svg';
+
 export const TopNav = () => {
 	return (
 		<header>
@@ -14,7 +15,7 @@ export const TopNav = () => {
 		              <div class="row">
 		                  <div class="col-12 d-flex flex-row align-items-center justify-content-between pt-15 pb-15">
 		                      <a href="../index.html" class="logo">
-		                          <img src="images/logo.png" class="img-fluid" alt="Unscrewed Logo" />
+		                          <img src={logo} class="img-fluid" alt="Unscrewed Logo" />
 		                      </a>
 		                      <div class="d-flex justify-content-center">
 		                          <a href="../index.html" class="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">App</a>
@@ -29,7 +30,8 @@ export const TopNav = () => {
 		                                  <a href="#" class="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">Logout</a>
 		                              </div>
 		                          </div>
-		                          <a href="#" class="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">Login</a>
+		                          
+		                          <NavLink className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize" to={{ pathname: "/login" }}>Login</NavLink>
 		                          <a href="#" class="landing-header-menu-item d-flex flex-row align-items-center text-capitalize text-nowrap active">
 		                              <i class="zmdi zmdi-shopping-cart mr-10" aria-hidden="true"></i>
 		                              Cart empty
