@@ -1,5 +1,10 @@
 import React from 'react';
- 
+import {
+    BrowserRouter as Router,
+    Route,
+    NavLink
+  } from 'react-router-dom';
+
 export const ExplorerLandingPage = () => {
 	return (
 		<main className="landing-main">
@@ -10,7 +15,7 @@ export const ExplorerLandingPage = () => {
                       <div className="col-12 col-lg-10 col-xl-8 pt-100 pb-100 landing-page-banner-wrapper d-flex flex-column align-items-center justify-content-center">
                           <h1 className="mb-40 text-center">Now Delivering</h1>
                           <h3 className="text-center mb-40">We already search for the world's best wine deals 24/7 at Unscrewed and Vinopedia. Now we're sending you 3 of the best deals we find each month</h3>
-                          <a href="../explorer/index.html" className="button-group button-group-white d-flex flex-row align-items-center justify-content-center">Try it, risk free</a>
+                          <NavLink className="button-group button-group-white d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Try it, risk free</NavLink>
                       </div>
                   </div>
               </div>
@@ -26,7 +31,7 @@ export const ExplorerLandingPage = () => {
                       <div className="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-start mb-100">
                           <h1 className="mb-40">You explore. We do all the research.</h1>
                           <p className="mb-40">Delicious, expressive, well-made wines can be found for $15, but but it's not easy. Time to get Unscrewed. Finding these huge value gems is <span>literally</span> our business... We started Explorer so you, too, can adventure through the fascinating world of wine confident that you're getting exceptional value in each bottle. Time to discover what you've been missing...</p>
-                          <a href="../explorer/index.html" className="button-group button-group-black d-flex flex-row align-items-center justify-content-center">Start Exploring</a>
+                          <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Start Exploring</NavLink>
                       </div>
                   </div>
               </div>
@@ -121,7 +126,7 @@ export const ExplorerLandingPage = () => {
                   </div>
                   <div className="row">
                       <div className="col-12 d-flex flex-row justify-content-center">
-                          <a href="../explorer/index.html" className="button-group button-group-black d-flex flex-row align-items-center justify-content-center">Start Exploring</a>
+                        <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Start Exploring</NavLink>
                       </div>
                   </div>
               </div>
@@ -155,7 +160,7 @@ export const ExplorerLandingPage = () => {
                       <div className="col-12 col-lg-10 d-flex flex-column align-items-center">
                           <h1 className="mb-40 text-center">How we select wine</h1>
                           <p className="mb-40 text-center">ALL WE CARE ABOUT when choosing your wines is QUALITY and PRICE. If our tasters and tastemakers (see unscrewed below) love a wine and it's priced exceptionally, it'll end up in your box. We don't care if it's organic, or biodynamic (though, often they are), or has an adorable backstory about the winemaker's dog, or if it has an ugly label (might be why we got the price), or if it's big and bold and jammy or light and funky and earthy. Great wines come in all styles and our club is about EXPLORING those styles with the confidence that you've got an exceptional deal. </p>
-                          <a href="../explorer/index.html" className="button-group button-group-white d-flex flex-row align-items-center justify-content-center">Start Exploring</a>
+                          <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Start Exploring</NavLink>
                       </div>
                   </div>
               </div>
@@ -186,7 +191,7 @@ export const ExplorerLandingPage = () => {
                   </div>
                   <div className="row">
                       <div className="col-12 d-flex flex-row justify-content-center">
-                          <a href="../explorer/index.html" className="button-group button-group-black d-flex flex-row align-items-center justify-content-center">Try it, risk free</a>
+                        <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Try it, risk free</NavLink>
                       </div>
                   </div>
               </div>
