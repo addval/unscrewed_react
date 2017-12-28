@@ -1,43 +1,84 @@
 import React,{Component} from 'react';
 import '../styles/logo-nav.css';
 import {userLogin} from '../services/auth';
+import PropTypes from 'prop-types';
+import {Redirect,Link} from 'react-router-dom';
 
 export class LoginPage extends Component{
 	constructor(props){
 		super(props);
+		console.log(this.props)
 		this.state = {
-			email:'',
-			password:''
-		}
+      loginFailed: false,
+      fields: {
+        email: '',
+        password: ''
+      }
+    }
+		// this.state = {
+		// 	email:'',
+		// 	password:''
+		// }
 	}
 	handleLogin = (evt) => {
 		evt.preventDefault();
-		userLogin(this.state.email,this.state.password)
-		.then(function(res){
-			if(res.data.success==true){
-				alert('Congrats ! logged in');
-			}
-			else{
-				alert(res.data.message);
-			}
+		this.setState({
+      loginFailed: false,
+    })
+		this.props.login(this.state.fields.email, this.state.fields.password)
+		.catch(err => {
+			
+			this.loginFailed()
 		})
+
+
+
+		// userLogin(this.state.email,this.state.password)
+		// .then(function(res){
+		// 	if(res.data.success==true){
+		// 		alert('Congrats ! logged in');
+		// 	}
+		// 	else{
+		// 		alert(res.data.message);
+		// 	}
+		// })
 	}
+	onInputChange = (evt) => {
+    const fields = this.state.fields
+    fields[evt.target.name] = evt.target.value
+    this.setState({ fields })
+	}
+	
+	loginFailed = () => {
+    this.setState({
+      loginFailed: true,
+      fields: {
+        email: '',
+        password: ''
+      }
+    })
+  }
+
 	render(){
+		 if(this.props.loggedIn){
+			return <Redirect to="/" />
+		 }
 		return (
-			<div>
+			<div className="login-form">
 				<h1 className="title-tab">Login</h1>
 				<span className="d-block text-center already-account-text">
-					Don't have an Unscrewed account?  <a href="#">Sign Up</a>
+					Don't have an Unscrewed account? <Link to="/signup">Sign Up</Link>
 				</span>
 				
-			
-					<div id="error_explanation" className="form-error hide">
-						<p align='center'>Alert text</p>
+					{ this.state.loginFailed &&
+					<div id="error_explanation" className="form-error">
+						<p align='center'>Invalid email or password</p>
 					</div>
+					}
 		
 				<div className="frm-login">
 						<div className="form-group">
-							<input type="email" placeholder="Email Address..." onChange={(evt)=>this.setState({email:evt.target.value})} />
+							<input type="email" name="email" placeholder="Email Address..." onChange={this.onInputChange} value={this.state.fields.email} />
 						</div>
 						
 						
@@ -45,7 +86,7 @@ export class LoginPage extends Component{
 						<div id="forgot_password_error" className="error hide form-error"><p>Please enter email address and then click "Forgot Password".</p></div>
 						<a href="#" className="forgot-link"  >Forgot email?</a>
 						<div className="form-group">
-							<input type="password" placeholder="Password..." onChange={(evt)=>this.setState({password:evt.target.value})}/>
+							<input type="password" name="password" placeholder="Password..." onChange={this.onInputChange} value={this.state.fields.password} />
 						</div>
 						
 						<a href="#" className="forgot-link"  >Forgot password?</a>
@@ -63,5 +104,11 @@ export class LoginPage extends Component{
 		
 		)
 	}
+	
+}
+ 
+LoginPage.propTypes = {
+	login: PropTypes.func.isRequired,
+  loggedIn: PropTypes.bool.isRequired
 	
 }

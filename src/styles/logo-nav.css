@@ -1644,3 +1644,6 @@ button.show_loader i.fa{
         width: 90%;
     }
 }
+.login-form{
+    margin-top: 100px;
+}
