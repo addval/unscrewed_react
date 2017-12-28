@@ -4,7 +4,7 @@ import {
   Switch
  } from 'react-router-dom';
 import {TopNav} from './components/TopNav.js'
-import {ExplorerLandingPage} from './components/ExplorerLandingPage.js'
+import {ExplorerHomePage} from './components/ExplorerHomePage.js'
 import {ExplorerPage} from './components/ExplorerPage.js'
 import {LoginPage} from './components/LoginPage.js'
 import {SignupPage} from './components/SignupPage.js'
@@ -17,7 +17,7 @@ class App extends Component {
     	<div>
 		  	<TopNav />
 		  	<Switch>
-				  <Route exact path='/' component={ExplorerLandingPage}/>
+				  <Route exact path='/' component={ExplorerHomePage}/>
 				  <Route path='/explorer' component={ExplorerPage}/>
 				  <Route path='/login' component={LoginPage}/>
 				  <Route path='/signup' component={SignupPage}/>

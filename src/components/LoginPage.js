@@ -14,7 +14,7 @@ export class LoginPage extends Component{
 		evt.preventDefault();
 		userLogin(this.state.email,this.state.password)
 		.then(function(res){
-			if(res.data.success==true){
+			if(res.data.success === true){
 				alert('Congrats ! logged in');
 			}
 			else{
