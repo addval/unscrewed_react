@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
     	<div>
-		  	<TopNav />
+		  	<TopNav/>
 		  	<Switch>
 				  <Route exact path='/' component={ExplorerLandingPage}/>
 				  <Route path='/explorer' component={ExplorerPage}/>
