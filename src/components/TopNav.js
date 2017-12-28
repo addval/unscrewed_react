@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink
- } from 'react-router-dom';
+} from 'react-router-dom';
 
 export const TopNav = () => {
 	return (
@@ -19,7 +19,7 @@ export const TopNav = () => {
                         
 		                      <div className="d-flex justify-content-center">
 		                          <a href="../index.html" className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">App</a>
-		                          <NavLink className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize active" to={{ pathname: "/explorer" }}>Explorer</NavLink>
+		                          <NavLink className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize active" to={{ pathname: "/" }}>Explorer</NavLink>
 		                          <a href="../blog/index.html" className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">Blog</a>
 		                      </div>
 		                      <div className="d-flex flex-row align-items-center justify-content-end">
