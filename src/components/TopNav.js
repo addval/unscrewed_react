@@ -4,7 +4,6 @@ import {
   Route,
   NavLink
  } from 'react-router-dom';
-import image_logo from '../images/unscrewed_logo.svg';
 
 export const TopNav = () => {
 	return (
@@ -14,12 +13,13 @@ export const TopNav = () => {
 		          <div className="container">
 		              <div className="row">
 		                  <div className="col-12 d-flex flex-row align-items-center justify-content-between pt-15 pb-15">
-		                      <a href="../index.html" className="logo">
-		                          <img src={image_logo} className="img-fluid" alt="Unscrewed Logo" />
-		                      </a>
+                        <NavLink className="logo" to={{ pathname: "/" }}>
+                          <img src={require('../images/unscrewed_logo.svg')} className="img-fluid" alt="Unscrewed Logo" />
+                        </NavLink>
+                        
 		                      <div className="d-flex justify-content-center">
 		                          <a href="../index.html" className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">App</a>
-		                          <a href="#" className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize active">Explorer</a>
+		                          <NavLink className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize active" to={{ pathname: "/explorer" }}>Explorer</NavLink>
 		                          <a href="../blog/index.html" className="landing-header-menu-item d-flex flex-row align-items-center text-capitalize">Blog</a>
 		                      </div>
 		                      <div className="d-flex flex-row align-items-center justify-content-end">

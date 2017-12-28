@@ -1,16 +1,10 @@
 import React from 'react';
-import image_landing_intro from '../images/landing-intro.png';
-import image_bottle_icon from '../images/bottole-icon.png';
-import image_arrow_right_icon from '../images/arrow-right-icon.png';
-import image_car_icon from '../images/car-icon.png';
-import image_cup_icon from '../images/cup-icon.png';
-import image_machine_icon from '../images/machine-icon.png';
-import image_fruits_icon from '../images/frouts-icon.png';
-import image_gift_box_icon from '../images/gift-box-icon.png';
-import image_box_image from '../images/box-image.png';
-import image_vinopedia_logo from '../images/vinopedia-logo.png';
-import image_unscrewed_logo from '../images/unscrewed_logo.svg';
- 
+import {
+    BrowserRouter as Router,
+    Route,
+    NavLink
+  } from 'react-router-dom';
+
 export const ExplorerLandingPage = () => {
 	return (
 		<main className="landing-main">
@@ -21,7 +15,7 @@ export const ExplorerLandingPage = () => {
                       <div className="col-12 col-lg-10 col-xl-8 pt-100 pb-100 landing-page-banner-wrapper d-flex flex-column align-items-center justify-content-center">
                           <h1 className="mb-40 text-center">Now Delivering</h1>
                           <h3 className="text-center mb-40">We already search for the world's best wine deals 24/7 at Unscrewed and Vinopedia. Now we're sending you 3 of the best deals we find each month</h3>
-                          <a href="../explorer/index.html" className="button-group button-group-white d-flex flex-row align-items-center justify-content-center">Try it, risk free</a>
+                          <NavLink className="button-group button-group-white d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Try it, risk free</NavLink>
                       </div>
                   </div>
               </div>
@@ -32,12 +26,12 @@ export const ExplorerLandingPage = () => {
               <div className="container">
                   <div className="row flex-lg-row-reverse align-items-lg-center justify-content-between">
                       <div className="col-12 col-lg-5 mb-lg-100">
-                          <img src={image_landing_intro} className="img-fluid d-block ml-md-auto mr-auto mr-md-0" alt="Landing page intro image" />
+                          <img src={require('../images/landing-intro.png')} className="img-fluid d-block ml-md-auto mr-auto mr-md-0" alt="Landing page intro image" />
                       </div>
                       <div className="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-start mb-100">
                           <h1 className="mb-40">You explore. We do all the research.</h1>
                           <p className="mb-40">Delicious, expressive, well-made wines can be found for $15, but but it's not easy. Time to get Unscrewed. Finding these huge value gems is <span>literally</span> our business... We started Explorer so you, too, can adventure through the fascinating world of wine confident that you're getting exceptional value in each bottle. Time to discover what you've been missing...</p>
-                          <a href="../explorer/index.html" className="button-group button-group-black d-flex flex-row align-items-center justify-content-center">Start Exploring</a>
+                          <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Start Exploring</NavLink>
                       </div>
                   </div>
               </div>
@@ -55,31 +49,31 @@ export const ExplorerLandingPage = () => {
                       <div className="col-12 col-lg-3">
                           <div className="landing-howitworks-card d-flex flex-column align-items-center mb-lg-100">
                               <div className="icon-box rounded-circle d-flex flex-column align-items-center justify-content-center mb-25">
-                                  <img src={image_bottle_icon} alt="Bottle Icon" className="img-fluid d-block ml-auto mr-auto" />
+                                  <img src={require('../images/bottole-icon.png')} alt="Bottle Icon" className="img-fluid d-block ml-auto mr-auto" />
                               </div>
                               <h2 className="mb-24">3 Wines</h2>
                               <p className="mb-0">We source three exceptionally high value wines at $15 / bottle</p>
                           </div>
                       </div>
                       <div className="col-12 col-lg-1 pt-60 pb-60 pb-lg-0 pt-lg-40">
-                          <img src={image_arrow_right_icon} className="img-fluid d-block ml-auto mr-auto arrow-icon" alt="Right arrow icon" />
+                          <img src={require('../images/arrow-right-icon.png')} className="img-fluid d-block ml-auto mr-auto arrow-icon" alt="Right arrow icon" />
                       </div>
                       <div className="col-12 col-lg-4">
                           <div className="landing-howitworks-card d-flex flex-column align-items-center mb-lg-100">
                               <div className="icon-box rounded-circle d-flex flex-column align-items-center justify-content-center mb-25">
-                                  <img src={image_car_icon} alt="Car Icon" className="img-fluid d-block ml-auto mr-auto" />
+                                  <img src={require('../images/car-icon.png')} alt="Car Icon" className="img-fluid d-block ml-auto mr-auto" />
                               </div>
                               <h2 className="mb-24">Monthly Delivery</h2>
                               <p className="mb-0">Shipping is always $5 anywhere in the U.S.</p>
                           </div>
                       </div>
                       <div className="col-12 col-lg-1 pt-60 pb-60 pb-lg-0 pt-lg-40">
-                          <img src={image_arrow_right_icon} className="img-fluid d-block ml-auto mr-auto arrow-icon" alt="Right arrow icon" />
+                          <img src={require('../images/arrow-right-icon.png')} className="img-fluid d-block ml-auto mr-auto arrow-icon" alt="Right arrow icon" />
                       </div>
                       <div className="col-12 col-lg-3">
                           <div className="landing-howitworks-card d-flex flex-column align-items-center mb-100">
                               <div className="icon-box rounded-circle d-flex flex-column align-items-center justify-content-center mb-25">
-                                  <img src={image_cup_icon} alt="Cup Icon" className="img-fluid d-block ml-auto mr-auto" />
+                                  <img src={require('../images/cup-icon.png')} alt="Cup Icon" className="img-fluid d-block ml-auto mr-auto" />
                               </div>
                               <h2 className="mb-24">Discover & Decide</h2>
                               <p className="mb-0">Change types & frequency, reorder or cancel any time</p>
@@ -100,7 +94,7 @@ export const ExplorerLandingPage = () => {
                   <div className="row flex-md-row-reverse align-items-center justify-content-center">
                       <div className="col-12 col-md-4 col-xl-3 d-flex flex-row justify-content-center justify-content-md-end mb-30 mb-md-60">
                           <div className="feature-image-box rounded-circle d-flex flex-column align-items-center justify-content-center position-relative p-30">
-                              <img src={image_cup_icon} alt="Feature Icon 1" className="img-fluid d-block ml-auto mr-auto" />
+                              <img src={require('../images/cup-icon.png')} alt="Feature Icon 1" className="img-fluid d-block ml-auto mr-auto" />
                           </div>
                       </div>
                       <div className="col-12 col-md-8 col-xl-7 mb-60">
@@ -111,7 +105,7 @@ export const ExplorerLandingPage = () => {
                   <div className="row align-items-center justify-content-center">
                       <div className="col-12 col-md-4 col-xl-3 d-flex flex-row justify-content-center justify-content-md-start mb-30 mb-md-60">
                           <div className="feature-image-box rounded-circle d-flex flex-column align-items-center justify-content-center position-relative p-20">
-                              <img src={image_fruits_icon} alt="Feature Icon 3" className="img-fluid d-block ml-auto mr-auto" />
+                              <img src={require('../images/frouts-icon.png')} alt="Feature Icon 3" className="img-fluid d-block ml-auto mr-auto" />
                           </div>
                       </div>
                       <div className="col-12 col-md-8 col-xl-7 mb-60">
@@ -122,7 +116,7 @@ export const ExplorerLandingPage = () => {
                   <div className="row flex-md-row-reverse align-items-center justify-content-center">
                       <div className="col-12 col-md-4 col-xl-3 d-flex flex-row justify-content-center justify-content-md-end mb-30 mb-md-60">
                           <div className="feature-image-box rounded-circle d-flex flex-column align-items-center justify-content-center position-relative p-30">
-                              <img src={image_gift_box_icon} alt="Feature Icon 3" className="img-fluid d-block ml-auto mr-auto" />
+                              <img src={require('../images/gift-box-icon.png')} alt="Feature Icon 3" className="img-fluid d-block ml-auto mr-auto" />
                           </div>
                       </div>
                       <div className="col-12 col-md-8 col-xl-7 mb-60">
@@ -132,7 +126,7 @@ export const ExplorerLandingPage = () => {
                   </div>
                   <div className="row">
                       <div className="col-12 d-flex flex-row justify-content-center">
-                          <a href="../explorer/index.html" className="button-group button-group-black d-flex flex-row align-items-center justify-content-center">Start Exploring</a>
+                        <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Start Exploring</NavLink>
                       </div>
                   </div>
               </div>
@@ -143,7 +137,7 @@ export const ExplorerLandingPage = () => {
               <div className="container">
                   <div className="row align-items-center">
                       <div className="col-12 col-md-7 mb-40 mb-md-100">
-                          <img src={image_box_image} className="img-fluid d-block" alt="What is in your box" />
+                          <img src={require('../images/box-image.png')} className="img-fluid d-block" alt="What is in your box" />
                       </div>
                       <div className="col-12 col-md-5 mb-100">
                           <h1 className="mb-40">What’s in your box</h1>
@@ -166,7 +160,7 @@ export const ExplorerLandingPage = () => {
                       <div className="col-12 col-lg-10 d-flex flex-column align-items-center">
                           <h1 className="mb-40 text-center">How we select wine</h1>
                           <p className="mb-40 text-center">ALL WE CARE ABOUT when choosing your wines is QUALITY and PRICE. If our tasters and tastemakers (see unscrewed below) love a wine and it's priced exceptionally, it'll end up in your box. We don't care if it's organic, or biodynamic (though, often they are), or has an adorable backstory about the winemaker's dog, or if it has an ugly label (might be why we got the price), or if it's big and bold and jammy or light and funky and earthy. Great wines come in all styles and our club is about EXPLORING those styles with the confidence that you've got an exceptional deal. </p>
-                          <a href="../explorer/index.html" className="button-group button-group-white d-flex flex-row align-items-center justify-content-center">Start Exploring</a>
+                          <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Start Exploring</NavLink>
                       </div>
                   </div>
               </div>
@@ -184,20 +178,20 @@ export const ExplorerLandingPage = () => {
                   <div className="row">
                       <div className="col-12 col-md-6 d-flex flex-row align-items-stretch">
                           <div className="landing-research-card pt-50 pb-50 pl-20 pr-20 p-lg-50 mb-70">
-                              <img src={image_vinopedia_logo} alt="Vinopedia Logo" className="img-fluid d-block ml-auto mr-auto mb-30" />
+                              <img src={require('../images/vinopedia-logo.png')} alt="Vinopedia Logo" className="img-fluid d-block ml-auto mr-auto mb-30" />
                               <p className="text-center mb-0">Vinopedia is a global wine search engine tracking millions of wines across thousands of retailers. We compare prices, aggregate reviews and monitor inventories so that you can find the best wines for your money, at the best prices. Unlike our competition, Vinopedia is free and always will be.</p>
                           </div>
                       </div>
                       <div className="col-12 col-md-6 d-flex flex-row align-items-stretch">
                           <div className="landing-research-card pt-50 pb-50 pl-20 pr-20 p-lg-50 mb-70">
-                              <img src={image_unscrewed_logo} alt="Unscrewed Logo" className="img-fluid d-block ml-auto mr-auto mb-40" />
+                              <img src={require('../images/unscrewed_logo.svg')} alt="Unscrewed Logo" className="img-fluid d-block ml-auto mr-auto mb-40" />
                               <p className="text-center mb-0">Unscrewed is a mobile app that helps you find great wines at the places you shop, like Trader Joe's, Kroger, Costco and Whole Foods. It puts chefs, wine experts and friends whose taste you trust in the aisles with you, so you're never shopping for wine alone. (Currently in LA and Seattle, more soon!).</p>
                           </div>
                       </div>
                   </div>
                   <div className="row">
                       <div className="col-12 d-flex flex-row justify-content-center">
-                          <a href="../explorer/index.html" className="button-group button-group-black d-flex flex-row align-items-center justify-content-center">Try it, risk free</a>
+                        <NavLink className="button-group button-group-black d-flex flex-row align-items-center justify-content-center" to={{ pathname: "/explorer" }}>Try it, risk free</NavLink>
                       </div>
                   </div>
               </div>
