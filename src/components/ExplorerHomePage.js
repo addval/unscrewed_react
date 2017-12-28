@@ -1,12 +1,11 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
-    Route,
     NavLink
   } from 'react-router-dom';
 
-export const ExplorerLandingPage = () => {
+export const ExplorerHomePage = () => {
 	return (
+    // Explorer Home Page Content Starts
 		<main className="landing-main">
       <div className="container-fluid landing-page-banner">
           <div className="row">
@@ -26,7 +25,7 @@ export const ExplorerLandingPage = () => {
               <div className="container">
                   <div className="row flex-lg-row-reverse align-items-lg-center justify-content-between">
                       <div className="col-12 col-lg-5 mb-lg-100">
-                          <img src={require('../images/landing-intro.png')} className="img-fluid d-block ml-md-auto mr-auto mr-md-0" alt="Landing page intro image" />
+                          <img src={require('../images/landing-intro.png')} className="img-fluid d-block ml-md-auto mr-auto mr-md-0" alt="Landing page intro" />
                       </div>
                       <div className="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-start mb-100">
                           <h1 className="mb-40">You explore. We do all the research.</h1>
@@ -197,6 +196,7 @@ export const ExplorerLandingPage = () => {
               </div>
           </div>
       </div>
-  </main>
+    </main>
+  // Explorer Home Page Content Ends
 	)
 }

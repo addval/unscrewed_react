@@ -5,7 +5,7 @@ import {
  } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {TopNav} from './components/TopNav.js'
-import {ExplorerLandingPage} from './components/ExplorerLandingPage.js'
+import {ExplorerHomePage} from './components/ExplorerHomePage.js'
 import {ExplorerPage} from './components/ExplorerPage.js'
 import {LoginPage} from './components/LoginPage.js'
 import {SignupPage} from './components/SignupPage.js'
@@ -127,7 +127,7 @@ class App extends Component {
     	<div>
 		  	<TopNav logout={this.logout}/>
 		  	<Switch>
-				  <Route exact path='/' component={ExplorerLandingPage}/>
+				  <Route exact path='/' component={ExplorerHomePage}/>
 				  <Route path='/explorer' component={ExplorerPage}/>
 				  <RouteWithProps path='/login' component={LoginPage} props={{ login: this.login,loggedIn:this.state.auth.loggedIn }} />
 				  <RouteWithProps path='/signup' component={SignupPage} props={{ signup: this.signup,loggedIn:this.state.auth.loggedIn }} />
