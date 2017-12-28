@@ -62,7 +62,7 @@ export const ExplorerPage = () => {
 
 				<div className="container checkout-form-wrap">
 					<div className="tab-content">
-						<div role="tabpanel" className="tab-pane fade in active first-tab" id="tab1">
+						<div role="tabpanel" className="tab-pane fade in active first-tab hide" id="tab1">
 							<h1 className="title-tab">Choose your wine types</h1>
 							<div className="row form-group product-chooser">
 		
@@ -184,7 +184,7 @@ export const ExplorerPage = () => {
 								<a href="" className="guest" id="checkout-guest">Check out as a Guest</a>
 							</div>
 						</div>
-						<div role="tabpanel" className="tab-pane fade in checkout-form cart-view" id="tab4">
+						<div role="tabpanel" className="tab-pane fade in checkout-form cart-view d-block" id="tab4">
 							<h1 className="title-tab">Check Out</h1>
 
 							<div className="col-lg-4 col-md-12 pull-right side-menu">
